@@ -1,0 +1,62 @@
+body{
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+}
+.game{
+    width: 600px;
+    height: 500px;
+    background-color: aliceblue;
+    border-bottom: 3px solid;
+    text-align: center;
+}
+
+#dino{
+    width: 50px;
+    height: 50px;
+    background-image: url(dino.png);
+    background-size: 100%;
+    position: relative;
+    top: 450px;
+}
+#cocktus{
+    width: 50px;
+    height: 50px;
+    background-image: url(cocktus.png);
+    background-size: 100%;
+    position: relative;
+    top: 400px;
+    left: 600px;
+    animation: cocktusrun 2s infinite linear;
+}
+@keyframes cocktusrun{
+    from{
+        left: 600px
+    }
+    to{
+        left: -50px;
+    }
+}
+@keyframes dinojump{
+    0%{
+        top: 400px;
+    }
+    25%{
+        top: 370px;
+    }
+    50%{
+        top: 340px;
+    }
+    75%{
+        top: 370px;
+    }
+    100%{
+        top: 400px;
+    }
+}
+.jump{
+    animation: dinojump 0.7s linear;
+}
